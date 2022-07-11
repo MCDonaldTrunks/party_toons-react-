@@ -21,9 +21,9 @@ function Header() {
           <li>tab 5</li>
           <li>tab 6</li>
         <MenuIcons>
-          <FacebookIcon />
-          <InstagramIcon/>
-          <ContactPhoneIcon/>
+          <FacebookIcon style={{ fill: '#595959' }} />
+          <InstagramIcon style={{ fill: '#595959' }} />
+          <ContactPhoneIcon style={{ fill: '#595959' }} /> 
           </MenuIcons>
 
         </UnorderedList>
@@ -78,13 +78,12 @@ const UnorderedList = styled.ul `
   align-items: center;
   justify-content: space-around;
   flex-grow: 1;
-
   li:not(:last-child) {
     margin-right: 15px;
   }
 
   li {
-      font-weight: bold;
+      font-weight: 300;
   }
 `
 
