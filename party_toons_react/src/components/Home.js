@@ -1,10 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import Header from './Header'
+import Welcome from './Welcome'
+import Collections from './Collections'
+
+
 function Home() {
   return (
     <Container>
       <Header/>
+      <Welcome/>
+      <Collections/>
     </Container>
   )
 }

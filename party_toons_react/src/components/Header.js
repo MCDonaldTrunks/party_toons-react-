@@ -21,9 +21,9 @@ function Header() {
           <li>tab 5</li>
           <li>tab 6</li>
         <MenuIcons>
-          <FacebookIcon style={{ fill: '#595959' }} />
-          <InstagramIcon style={{ fill: '#595959' }} />
-          <ContactPhoneIcon style={{ fill: '#595959' }} /> 
+          <FacebookIcon style={{ fill: '#424242' }} />
+          <InstagramIcon style={{ fill: '#424242' }} />
+          <ContactPhoneIcon style={{ fill: '#424242' }} /> 
           </MenuIcons>
 
         </UnorderedList>
@@ -39,36 +39,33 @@ export default Header
 
 const Container = styled.header `
   display: flex;
-  height: 210px;
+  height: 190px;
   width: 100vw;
   background-color: white;
   justify-content: space-between;
-  
+  padding: 0 3em;
 `
 
 const TitleBox = styled.div `
   display: flex;
   flex-direction: column;
-  Flex-grow: 1;
   justify-content: center;
-  align-items: center;
-  width: 40px;
-  padding: 0 140px;
-
+  flex-grow: 1;
+  padding: 0 5em 0 3em;
   h1 {
     font-weight: 325;
     color: green;
   }
 
-
-
-
-
+  h1, p {
+    display:flex;
+    width: 110px;
+  }
 `
 
 const MenuBox = styled.div `
   display: flex;
-  flex-grow: 3;
+  flex-grow: 2;
   justify-content: space-between;
 `
 
