@@ -1,6 +1,5 @@
 // ------------------------- Importations!!! ----------------------------\\
 
-
 import React from 'react' ;
 import styled from 'styled-components';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -15,28 +14,32 @@ const Welcome = () => {
     // ------------------------- Jsx!!! ----------------------------\\
 
     <Container>
+      <RightChevron>
+        <ChevronRightIcon fontSize='100%' />
+      </RightChevron>
+      <LeftChevron>
+        <ChevronLeftIcon  fontSize='100%'/>
+      </LeftChevron>
       <OversizeCardHolder>
-        <RightChevron>
-          <ChevronRightIcon fontSize='100%' />
-        </RightChevron>
-        <LeftChevron>
-          <ChevronLeftIcon  fontSize='100%'/>
-        </LeftChevron>
+        
         <WelcomeCard1>
           <h2>Welcome</h2>
           <h4>Choose from our many rental options for your special day with that special someone.</h4>
           <div id='get-location-button'>Get location</div>
         </WelcomeCard1>
         <WelcomeCard2>
+          <h2>welcome 2</h2>
         </WelcomeCard2>
         <WelcomeCard3>
+          <h2>welcome 3</h2>
         </WelcomeCard3>
-        <ScrollBox>
+        
+      </OversizeCardHolder> 
+      <ScrollBox>
           <ScrollBar className='selected'/>
           <ScrollBar id='second-bar'/>
           <ScrollBar/>
         </ScrollBox>
-      </OversizeCardHolder> 
     </Container>
   )
 } ;
@@ -52,8 +55,21 @@ const OversizeCardHolder = styled.div `
   justify-content: space-around;
   align-items:center;
   overflow: hidden;
-  
+  transition: transform 1s;
+
+  :hover{
+    transform: translateX(33%);
+
+  }
+  .second-card{
+
+  }
+  .third-card{
+
+  }
+
 `
+
 
 
 const Container = styled.div `
@@ -66,6 +82,7 @@ const Container = styled.div `
   position: relative;
   overflow: hidden;
   background-color: #CECDCD;
+  
 `
 
 const WelcomeCard1 = styled.div`
@@ -138,7 +155,6 @@ const RightChevron = styled.div `
   position: absolute;
   fill: #a9a7a7;
   font-size: 70px;
-
 
   :hover {
     cursor: pointer;
