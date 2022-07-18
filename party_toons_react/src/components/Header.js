@@ -10,7 +10,7 @@ function Header() {
     <Container>
       <TitleBox>
         <h1>Party Toons</h1>
-        <p>Events, parties, and gatherings</p>
+        <p>Events and Gatherings</p>
       </TitleBox>
       <MenuBox>
         <UnorderedList>
@@ -35,7 +35,7 @@ function Header() {
   )
 }
 
-export default Header
+export default Header;
 
 const Container = styled.header `
   display: flex;
@@ -43,10 +43,11 @@ const Container = styled.header `
   width: 100vw;
   background-color: white;
   justify-content: space-between;
-  padding: 0 3em;
+  padding: 0 15.5%;
 `
 
 const TitleBox = styled.div `
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,6 +61,10 @@ const TitleBox = styled.div `
   h1, p {
     display:flex;
     width: 110px;
+  }
+
+  p {
+    font-weight: 300;
   }
 `
 

@@ -1,3 +1,6 @@
+// ------------------------- Importations!!! ----------------------------\\
+
+
 import React from 'react' ;
 import styled from 'styled-components';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -5,15 +8,19 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const Welcome = () => {
   return (
+    // ------------------------- Jsx!!! ----------------------------\\
+
     <Container>
       <RightChevron>
-        <ChevronRightIcon fontSize='large' />
+        <ChevronRightIcon fontSize='100%' />
       </RightChevron>
       <LeftChevron>
-        <ChevronLeftIcon fontSize='large' />
+        <ChevronLeftIcon  fontSize='100%'/>
       </LeftChevron>
       <WelcomeCard1>
         <h2>Welcome</h2>
+        <h4>Choose from our many rental options for your special day with that special someone.</h4>
+        <div id='get-location-button'>Get location</div>
       </WelcomeCard1>
       <WelcomeCard2>
       </WelcomeCard2>
@@ -30,15 +37,21 @@ const Welcome = () => {
 
 export default Welcome ;
 
+// ------------------------- Styled Components!!! ----------------------------\\
+
+
+
+
 const Container = styled.div `
   width: 100%;
-  height: 719px;
+  height: 665px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  background-color: #CECDCD;
 `
 
 const WelcomeCard1 = styled.div`
@@ -49,6 +62,22 @@ const WelcomeCard1 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  h4 {
+    font-weight: 300;
+    width: 70%;
+    padding: 3em 0;
+    text-align: center;
+  }
+
+  #get-location-button {
+    color: white;
+    background-color: #3d3d3d;
+    padding: 1em 2em;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 `
 
 
@@ -74,7 +103,7 @@ const ScrollBox = styled.div`
   }
 
   .selected {
-    background-color: #4a4a4a;
+    background-color: #292929;
   }
 `
 
@@ -87,16 +116,28 @@ const ScrollBar = styled.div`
 `
 
 const RightChevron = styled.div `
-  right: 7px;
+  right: 15px;
   align-self: center;
   position: absolute;
-  fill: gray;
+  fill: #a9a7a7;
+  font-size: 70px;
+
+
+  :hover {
+    cursor: pointer;
+  }
 `
 
-const LeftChevron = styled.div `
-  left: 7px;
+const LeftChevron = styled.div`
+  left: 15px;
   align-self: center;
   position: absolute;
-  fill: gray;
+  color: #7a7a7a;
+  font-size: 70px;
+
+  
+  :hover {
+    cursor: pointer;
+  }
 `
 
