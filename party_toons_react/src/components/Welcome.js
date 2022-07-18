@@ -7,30 +7,36 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const Welcome = () => {
+
+  const moveRight = item => item.page + 1;
+  const moveLeft = item => item.page - 1;
+
   return (
     // ------------------------- Jsx!!! ----------------------------\\
 
     <Container>
-      <RightChevron>
-        <ChevronRightIcon fontSize='100%' />
-      </RightChevron>
-      <LeftChevron>
-        <ChevronLeftIcon  fontSize='100%'/>
-      </LeftChevron>
-      <WelcomeCard1>
-        <h2>Welcome</h2>
-        <h4>Choose from our many rental options for your special day with that special someone.</h4>
-        <div id='get-location-button'>Get location</div>
-      </WelcomeCard1>
-      <WelcomeCard2>
-      </WelcomeCard2>
-      <WelcomeCard3>
-      </WelcomeCard3>
-      <ScrollBox>
-        <ScrollBar className='selected'/>
-        <ScrollBar id='second-bar'/>
-        <ScrollBar/>
-      </ScrollBox>
+      <OversizeCardHolder>
+        <RightChevron>
+          <ChevronRightIcon fontSize='100%' />
+        </RightChevron>
+        <LeftChevron>
+          <ChevronLeftIcon  fontSize='100%'/>
+        </LeftChevron>
+        <WelcomeCard1>
+          <h2>Welcome</h2>
+          <h4>Choose from our many rental options for your special day with that special someone.</h4>
+          <div id='get-location-button'>Get location</div>
+        </WelcomeCard1>
+        <WelcomeCard2>
+        </WelcomeCard2>
+        <WelcomeCard3>
+        </WelcomeCard3>
+        <ScrollBox>
+          <ScrollBar className='selected'/>
+          <ScrollBar id='second-bar'/>
+          <ScrollBar/>
+        </ScrollBox>
+      </OversizeCardHolder> 
     </Container>
   )
 } ;
@@ -39,7 +45,15 @@ export default Welcome ;
 
 // ------------------------- Styled Components!!! ----------------------------\\
 
-
+const OversizeCardHolder = styled.div `
+  width: 300%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  overflow: hidden;
+  
+`
 
 
 const Container = styled.div `
@@ -82,10 +96,13 @@ const WelcomeCard1 = styled.div`
 
 
 
-const WelcomeCard2 = styled.div``
+const WelcomeCard2 = styled(WelcomeCard1)`
+
+`
 
 
-const WelcomeCard3 = styled.div``
+const WelcomeCard3 = styled(WelcomeCard1)`
+`
 
 
 const ScrollBox = styled.div`
