@@ -4,7 +4,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import React from "react";
 import Slider from "react-slick";
-import WelcomeCard from './WelcomeCard'
+import UpdatedSlider from './UpdatedSlider'
 import styled from "styled-components";
 
 
@@ -17,8 +17,8 @@ export default function SimpleSlider() {
     slidesToScroll: 1,
   };
   return (
-    <Slider {...settings}>
-      <CardContainer>
+    <UpdatedSlider {...settings} >
+      <CardContainer className="card-container">
         <WelcomeCard1>
           <h2>Welcome</h2>
           <h4>
@@ -38,16 +38,16 @@ export default function SimpleSlider() {
           <h2>welcome 3</h2>
         </WelcomeCard3>
       </CardContainer>
-    </Slider>
+    </UpdatedSlider>
   );
 }
 
 const CardContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 665px;
+  justify-content: center;
+  align-items: center;
 `
 
 
@@ -77,6 +77,7 @@ const WelcomeCard1 = styled.div`
     cursor: pointer;
   }
 `
+
 
 
 

@@ -8,9 +8,6 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const Welcome = () => {
 
-  const moveRight = item => item.page + 1;
-  const moveLeft = item => item.page - 1;
-
   return (
     // ------------------------- Jsx!!! ----------------------------\\
 
