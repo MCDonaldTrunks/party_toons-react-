@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
+
 const Welcome = () => {
 
   const moveRight = item => item.page + 1;
@@ -55,18 +56,8 @@ const OversizeCardHolder = styled.div `
   justify-content: space-around;
   align-items:center;
   overflow: hidden;
-  transition: transform 1s;
 
-  :hover{
-    transform: translateX(33%);
-
-  }
-  .second-card{
-
-  }
-  .third-card{
-
-  }
+  
 
 `
 
