@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import styled from "styled-components";
 
 
-export default function SimpleSlider() {
+export default function SimpleSlider() { 
   var settings = {
     dots: true,
     infinite: true,
