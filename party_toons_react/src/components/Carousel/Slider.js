@@ -20,25 +20,33 @@ export default function SimpleSlider() {
   return (
     <UpdatedSlider {...settings} >
       <CardContainer className="card-container">
-        <WelcomeCard1>
-          <h2>Welcome</h2>
-          <h4>
-            Choose from our many rental options for your special day with that
-            special someone.
-          </h4>
-          <div id="get-location-button">Get location</div>
-        </WelcomeCard1>
+        <Soultaker>
+          <WelcomeCard1>
+            <h2>Welcome</h2>
+            <h4>
+              Choose from our many rental options for your special day with that
+              special someone.
+            </h4>
+            <div id="get-location-button">Get location</div>
+          </WelcomeCard1>
+        </Soultaker>  
+        
       </CardContainer>
       <CardContainer>
-        <WelcomeCard2>
-          <h2>welcome 2</h2>
-        </WelcomeCard2>
+        <Soultaker>
+          <WelcomeCard2>
+            <h2>welcome 2</h2>
+          </WelcomeCard2>
+        </Soultaker>
       </CardContainer> 
       <CardContainer>
-        <WelcomeCard3>
-          <h2>welcome 3</h2>
-        </WelcomeCard3>
+        <Soultaker>
+          <WelcomeCard3>
+            <h2>welcome 3</h2>
+          </WelcomeCard3>
+        </Soultaker> 
       </CardContainer>
+        
     </UpdatedSlider>
   );
 }
@@ -47,10 +55,15 @@ const CardContainer = styled.div`
   display: flex;
   width: 100%;
   height: 665px;
+`
+const Soultaker = styled.div`
+  display: flex;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
-`
 
+`
 
 const WelcomeCard1 = styled.div`
   width: 570px;
@@ -60,7 +73,6 @@ const WelcomeCard1 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 151.5px auto;
 
   h4 {
     font-weight: 300;
