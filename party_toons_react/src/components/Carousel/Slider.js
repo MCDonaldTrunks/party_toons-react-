@@ -15,6 +15,7 @@ export default function SimpleSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
   };
   return (
     <UpdatedSlider {...settings} >
@@ -59,7 +60,7 @@ const WelcomeCard1 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto auto;
+  margin: 151.5px auto;
 
   h4 {
     font-weight: 300;
