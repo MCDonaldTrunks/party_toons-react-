@@ -4,7 +4,6 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import React from "react";
 import Slider from "react-slick";
-import UpdatedSlider from './UpdatedSlider'
 import styled from "styled-components";
 
 
@@ -18,7 +17,7 @@ export default function SimpleSlider() {
     arrows: false,
   };
   return (
-    <UpdatedSlider {...settings} >
+    <Slider {...settings} >
       <CardContainer className="card-container">
         <Soultaker>
           <WelcomeCard1>
@@ -47,7 +46,7 @@ export default function SimpleSlider() {
         </Soultaker> 
       </CardContainer>
         
-    </UpdatedSlider>
+    </Slider>
   );
 }
 
