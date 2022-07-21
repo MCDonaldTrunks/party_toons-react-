@@ -1,17 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 import Header from './../Header/Header'
-import Welcome from './../Carousel/Welcome'
-import Collections from './../Collections/Collections'
-import Slider from './../Carousel/Slider'
-
+import ImageSliderContainer from '../ImageSlider.js/ImageSliderContainer'
+import Slider from '../WelcomeCarousel/Slider'
+import OwnerSection from '../OwnerSection/OwnerSection'
+import OurRentals from '../OurRentals/OurRentals'
+import Workshop from '../Workshop/Workshop'
+import Contacts from '../Contacts/Contacts'
 
 function Home() {
   return (
     <Container>
       <Header/>
       <Slider/>
-      <Collections/>
+      <ImageSliderContainer/>
+      <OwnerSection/>
+      <OurRentals/>
+      <Workshop/>
+      <Contacts/>
     </Container>
   )
 }

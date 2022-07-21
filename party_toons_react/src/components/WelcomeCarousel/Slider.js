@@ -55,6 +55,7 @@ const CardContainer = styled.div`
   width: 100%;
   height: 665px;
 `
+
 const Soultaker = styled.div`
   display: flex;
   height: 100%;
