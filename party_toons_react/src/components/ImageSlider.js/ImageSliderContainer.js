@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SwiperComponent from "./SwiperComponent";
 
 function ImageSliderContainer() {
   return (
@@ -9,7 +10,7 @@ function ImageSliderContainer() {
         We are interested in individualities and the possibility of creating
         unforgettable moments — that’s what makes our work so exciting
       </SubHeader>
-      
+      <SwiperComponent></SwiperComponent>
     </Container>
   );
 }
@@ -19,6 +20,7 @@ export default ImageSliderContainer;
 const SubHeader = styled.span`
   font-size: 18px;
   text-align: center;
+  width: 40vw;
 `;
 
 const Container = styled.div`
@@ -26,9 +28,10 @@ const Container = styled.div`
   width: 100%;
   height: 1208px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  
 `;
 
 

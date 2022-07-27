@@ -44,6 +44,7 @@ const Container = styled.header `
   background-color: white;
   justify-content: space-between;
   padding: 0 15.5%;
+  overflow: hidden;
 `
 
 const TitleBox = styled.div `
