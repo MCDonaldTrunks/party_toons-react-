@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { productImages } from "./assets/productImages";
 import SwiperComponent from "./SwiperComponent";
 
 function ImageSliderContainer() {
@@ -10,7 +11,7 @@ function ImageSliderContainer() {
         We are interested in individualities and the possibility of creating
         unforgettable moments — that’s what makes our work so exciting
       </SubHeader>
-      <SwiperComponent></SwiperComponent>
+      <SwiperComponent images={productImages}></SwiperComponent>
     </Container>
   );
 }
@@ -21,6 +22,7 @@ const SubHeader = styled.span`
   font-size: 18px;
   text-align: center;
   width: 40vw;
+  line-height: 1.8;
 `;
 
 const Container = styled.div`
@@ -32,6 +34,9 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   
+  h2 {
+    margin-top: 50px;
+  }
 `;
 
 
