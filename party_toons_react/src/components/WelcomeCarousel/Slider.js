@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import styled from "styled-components";
 
 
-export default function SimpleSlider() { 
+export default function SimpleSlider() {
   var settings = {
     dots: true,
     infinite: true,
@@ -28,8 +28,8 @@ export default function SimpleSlider() {
             </h4>
             <div id="get-location-button">Get location</div>
           </WelcomeCard1>
-        </Soultaker>  
-        
+        </Soultaker>
+
       </CardContainer>
       <CardContainer>
         <Soultaker>
@@ -37,15 +37,15 @@ export default function SimpleSlider() {
             <h2>welcome 2</h2>
           </WelcomeCard2>
         </Soultaker>
-      </CardContainer> 
+      </CardContainer>
       <CardContainer>
         <Soultaker>
           <WelcomeCard3>
             <h2>welcome 3</h2>
           </WelcomeCard3>
-        </Soultaker> 
+        </Soultaker>
       </CardContainer>
-        
+
     </Slider>
   );
 }
@@ -101,4 +101,3 @@ const WelcomeCard2 = styled(WelcomeCard1)`
 
 const WelcomeCard3 = styled(WelcomeCard1)`
 `
- 
