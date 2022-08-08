@@ -13,4 +13,12 @@ const Container = styled.div`
     height: 791px;
     width: 100%;
     background-color: white;
+
+  
+`
+
+const LeftInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
