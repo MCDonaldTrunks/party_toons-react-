@@ -28,6 +28,18 @@ function Contacts() {
           We welcome every new friend. Together we will bring some magic into
           this world.
         </p>
+        <InfoMains>
+          <label>Adress</label>
+
+        </InfoMains>
+        <InfoMains>
+          <label>Hours of Bussiness</label>
+
+        </InfoMains>
+        <InfoMains>
+          <label>Contacts</label>
+
+        </InfoMains>
       </LeftInfo>
       <RightForm 
         onSubmit={submitHandler}>
@@ -66,6 +78,7 @@ const Container = styled.div`
   height: 791px;
   width: 100%;
   background-color: white;
+  padding: 100px 0;
 `;
 
 const LeftInfo = styled.div`
@@ -73,6 +86,7 @@ const LeftInfo = styled.div`
   flex-direction: column;
   align-items: center;
   flex: 1;
+  justify-content: space-around;
 `;
 
 const RightForm = styled.form`
@@ -80,6 +94,7 @@ const RightForm = styled.form`
   flex-direction: column;
   align-items: center;
   flex: 1;
+  justify-content: space-around;
 `;
 
 const SubButton = styled.button`
@@ -87,4 +102,12 @@ const SubButton = styled.button`
 
 `
 
+const InfoMains = styled.div`
+  display: flex;
+`
+
+
+
 //json-server --watch data/db.json --port 8000
+
+
