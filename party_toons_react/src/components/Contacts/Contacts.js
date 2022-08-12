@@ -31,17 +31,17 @@ function Contacts() {
           </p>
           <InfoMains>
             <label>Adress</label>
-            <p>2038 E 10th St, Long Beach, CA 90813</p>
+            <p>2038 E 10th St, <br></br>Long Beach, CA 90813</p>
           </InfoMains>
           <InfoMains>
             <label>Hours of Bussiness</label>
-            <p>Monday - Saturday: 11 AM - 10 PM
+            <p>Monday - Saturday: 11 AM - 10 PM <br></br>
               Sunday: 11 AM - 5 PM</p>
 
           </InfoMains>
           <InfoMains>
             <label>Contacts</label>
-            <p>+1 (234) 567 89 00
+            <p>+1 (234) 567 89 00<br></br>
               mywebsite@a.weblium.com</p>
           </InfoMains>
         </LeftInfo>
@@ -91,7 +91,7 @@ const Container = styled.div`
 
 const SubContainer = styled.div`
   display: flex;
-  width: 84%;
+  width: 64%;
   height: 74%;
 `
 
@@ -103,7 +103,7 @@ const LeftInfo = styled.div`
   padding: 0 15px;
 
   p {
-    20px;
+    font-size: 20px;
   }
 
   * {
@@ -138,18 +138,21 @@ const RightBackground = styled.div`
   background-color: #e9e9e9;
   padding: 0 15px;
   background-clip: content-box;
+  justify-content: center;
+  align-items: center;
 `
 
 const RightForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
+  width: 65%;
+  height: 80%;
 
   input {
     border-radius: 5px;
     padding: 12px 24px;
-    width: 70%;
+    width: 100%;
     background-color: rgba(67, 67, 67, 0.12);
     border-color: #d9d9d9;
     border: none;
@@ -159,9 +162,9 @@ const RightForm = styled.form`
   textarea {
     border-color: #d9d9d9;
     background-color: rgba(67, 67, 67, 0.12);
-    height: 40%;
+    height: 126px;
     padding: 12px 24px;
-    width: 70%;
+    width: 100%;
     margin-top: 24px;
     resize: none;
   }
@@ -173,7 +176,7 @@ const RightForm = styled.form`
 
 const SubButton = styled.button`
   display: flex;
-  width: 70%;
+  width: 100%;
   padding: 12px 24px;
   justify-content: center;
   align-items: center;
