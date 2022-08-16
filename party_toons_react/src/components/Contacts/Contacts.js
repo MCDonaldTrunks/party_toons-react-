@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 function Contacts() {
   const [fullName, setFullName] = useState("");
@@ -34,7 +36,7 @@ function Contacts() {
             <p>2038 E 10th St, <br></br>Long Beach, CA 90813</p>
           </InfoMains>
           <InfoMains>
-            <label>Hours of Bussiness</label>
+            <label>Hours</label>
             <p>Monday - Saturday: 11 AM - 10 PM <br></br>
               Sunday: 11 AM - 5 PM</p>
 
@@ -44,6 +46,10 @@ function Contacts() {
             <p>+1 (234) 567 89 00<br></br>
               mywebsite@a.weblium.com</p>
           </InfoMains>
+          <Icons>
+            <FacebookIcon viewBox='3 0 22 22'/>
+            <InstagramIcon viewBox='1 0 22 22'/>
+          </Icons>
         </LeftInfo>
         <RightBackground>
           <RightForm
@@ -107,7 +113,7 @@ const LeftInfo = styled.div`
   }
 
   * {
-    margin-top: 25px;
+    margin-top: 18px;
   }
 
   h2 {
@@ -128,6 +134,21 @@ const InfoMains = styled.div`
 
   p {
     font-size: 16px;
+  }
+`
+
+const Icons = styled.div`
+  display: flex;
+  svg {
+    margin-right: 10px;
+    font-Size: 46px;
+    box-sizing: border-box;
+
+    path {
+      object-fit: cover;
+      position: absolute;
+      left: -9px;
+    }
   }
 `
 
@@ -167,6 +188,7 @@ const RightForm = styled.form`
     width: 100%;
     margin-top: 24px;
     resize: none;
+    border-radius: 5px;
   }
 
   button:hover, button:focus {

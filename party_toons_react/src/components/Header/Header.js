@@ -1,9 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
-
+import React from "react";
+import styled from "styled-components";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 
 function Header() {
   return (
@@ -14,30 +13,26 @@ function Header() {
       </TitleBox>
       <MenuBox>
         <UnorderedList>
-          <li>tab 1</li>
-          <li>tab 2</li>
-          <li>tab 3</li>
-          <li>tab 4</li>
-          <li>tab 5</li>
-          <li>tab 6</li>
-        <MenuIcons>
-          <FacebookIcon style={{ fill: '#424242' }} />
-          <InstagramIcon style={{ fill: '#424242' }} />
-          <ContactPhoneIcon style={{ fill: '#424242' }} /> 
+          <li>Location</li>
+          <li>Our events</li>
+          <li>About us</li>
+          <li>Our Rentals</li>
+          <li>Workshop</li>
+          <li>Contacts</li>
+          <MenuIcons>
+            <FacebookIcon style={{ fill: "#424242" }} />
+            <InstagramIcon style={{ fill: "#424242" }} />
+            <ContactPhoneIcon style={{ fill: "#424242" }} />
           </MenuIcons>
-
         </UnorderedList>
-          
       </MenuBox>
     </Container>
-
-    
-  )
+  );
 }
 
 export default Header;
 
-const Container = styled.header `
+const Container = styled.header`
   display: flex;
   height: 190px;
   width: 100vw;
@@ -45,9 +40,9 @@ const Container = styled.header `
   justify-content: space-between;
   padding: 0 15.5%;
   overflow: hidden;
-`
+`;
 
-const TitleBox = styled.div `
+const TitleBox = styled.div`
   line-height: 1.5;
   display: flex;
   flex-direction: column;
@@ -59,23 +54,23 @@ const TitleBox = styled.div `
     color: green;
   }
 
-  h1, p {
-    display:flex;
+  h1,p {
+    display: flex;
     width: 110px;
   }
 
   p {
     font-weight: 300;
   }
-`
+`;
 
-const MenuBox = styled.div `
+const MenuBox = styled.div`
   display: flex;
   flex-grow: 2;
   justify-content: space-between;
-`
+`;
 
-const UnorderedList = styled.ul `
+const UnorderedList = styled.ul`
   display: flex;
   list-style-type: none;
   align-items: center;
@@ -86,13 +81,13 @@ const UnorderedList = styled.ul `
   }
 
   li {
-      font-weight: 300;
+    font-weight: 300;
   }
-`
+`;
 
-const MenuIcons = styled.div `
+const MenuIcons = styled.div`
   display: flex;
   flex-grow: 3;
   justify-content: space-around;
   max-width: 150px;
-`
+`;
