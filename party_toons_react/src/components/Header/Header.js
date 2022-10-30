@@ -3,27 +3,40 @@ import styled from 'styled-components'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
+import { Link } from 'react-scroll'
 
 
 function Header() {
   return (
-    <Container>
+    <Container id='Navbar'>
       <TitleBox>
         <h1>Party Toons</h1>
         <p>Events and Gatherings</p>
       </TitleBox>
       <MenuBox>
         <UnorderedList>
-          <li>tab 1</li>
-          <li>tab 2</li>
-          <li>tab 3</li>
-          <li>tab 4</li>
-          <li>tab 5</li>
-          <li>tab 6</li>
+          <li className='nav-item'>
+            <Customlink to='Welcome' spy={true} smooth={true} offset={50} duration={500}>Home</Customlink>
+          </li>
+          <li className='nav-item'>
+            <Customlink to='ImageCarausel' spy={true} smooth={true} offset={50} duration={500}>Samples</Customlink>
+          </li>
+          <li className='nav-item'>
+            <Customlink to='OwnerSection' spy={true} smooth={true} offset={50} duration={500}>About</Customlink>
+          </li>
+          <li className='nav-item'>
+            <Customlink to='OurRentals' spy={true} smooth={true} offset={50} duration={500}>Our Rentals</Customlink>
+          </li>
+          <li className='nav-item'>
+            <Customlink to='Workshop' spy={true} smooth={true} offset={50} duration={500}>Workshop</Customlink>
+          </li>
+          <li className='nav-item'>
+            <Customlink to='Contacts' spy={true} smooth={true} offset={50} duration={500}>Contacts</Customlink>
+          </li>
         <MenuIcons>
-          <FacebookIcon style={{ fill: '#424242' }} />
-          <InstagramIcon style={{ fill: '#424242' }} />
-          <ContactPhoneIcon style={{ fill: '#424242' }} /> 
+          <FacebookIcon style={{ fill: '#424242', cursor: "pointer" }} />
+          <InstagramIcon style={{ fill: '#424242', cursor: "pointer"}} />
+          <ContactPhoneIcon style={{ fill: '#424242', cursor: "pointer"}} /> 
           </MenuIcons>
 
         </UnorderedList>
@@ -37,14 +50,24 @@ function Header() {
 
 export default Header;
 
+
+
 const Container = styled.header `
   display: flex;
   height: 190px;
   width: 100vw;
-  background-color: white;
+  background-color: #ffffff91;
   justify-content: space-between;
   padding: 0 15.5%;
   overflow: hidden;
+  position: sticky;
+  top:0;
+  z-index: 100;
+
+`
+
+const Customlink = styled(Link)`
+  cursor: pointer;
 `
 
 const TitleBox = styled.div `

@@ -15,6 +15,7 @@ export default function SimpleSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    className: 'Welcome'
   };
   return (
     <Slider {...settings} >

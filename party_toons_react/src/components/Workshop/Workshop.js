@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 function Workshop() {
   return (
-    <Container>
+    <Container className="Workshop">
       <h2>Workshop</h2>
       <SubContainer>
         <LeftSide>
@@ -99,4 +99,5 @@ const Appointment = styled.div`
   font-size: 14px;
   border-radius: 5px;
   width: fit-content;
+  cursor: pointer;
 `;

@@ -11,17 +11,12 @@ function Contacts() {
     e.preventDefault();
     const inquiry = { fullName, email, phoneNumber, message }
 
-    fetch('http://localhost:8000/blogs', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(inquiry)
-    }).then(() => {
-      console.log('inquiry added successfully')
-    })
+    console.log('done')
+    console.log(inquiry)
   }
 
   return (
-    <Container>
+    <Container id="Contacts">
       <SubContainer>
         <LeftInfo>
           <h2>Contacts</h2>
@@ -51,24 +46,30 @@ function Contacts() {
             <input
               placeholder="Enter your full name*"
               value={fullName}
+              name = 'fullName'
               onChange={(e) => setFullName(e.target.value)}
             ></input>
             <input
               placeholder="Enter your phone number*"
               value={phoneNumber}
+              name = 'phoneNumber'
               onChange={(e) => setPhoneNumber(e.target.value)}
             ></input>
             <input
               placeholder="Enter your email address*"
               value={email}
+              name = 'email'
               onChange={(e) => setEmail(e.target.value)}
             ></input>
             <textarea
               placeholder="Type your message*"
               value={message}
+              name = 'message'
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
-            <SubButton>
+            <SubButton
+              type="submit"
+            >
               Submit
             </SubButton>
           </RightForm>
@@ -167,6 +168,7 @@ const RightForm = styled.form`
     width: 100%;
     margin-top: 24px;
     resize: none;
+    border: none;
   }
 
   button:hover, button:focus {

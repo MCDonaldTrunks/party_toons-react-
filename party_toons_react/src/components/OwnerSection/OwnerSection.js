@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 function OwnerSection() {
   return(
-    <Container>
+    <Container className="OwnerSection">
       <OwnerPhotoContainer>
         <img
           src="https://www.prhspeakers.com/wp-content/uploads/2013/03/Flynn_Gillian_940_529_72-ppi.jpg"
