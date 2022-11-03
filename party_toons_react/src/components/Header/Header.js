@@ -12,13 +12,13 @@ function Header() {
 
   const [show, setShow] = useState(true)
   const controlNavbar = () => {
-    if (window.scrollY && window.scrollY > 100 ) {
+    if (window.scrollY && window.scrollY >= 2) {
       setShow(false)
-      console.log('trigered')
-      console.log(window.scrollY)
+      console.log(window.scrollY + 'over100')
     } else {
       setShow(true)
-      
+      console.log(window.scrollY + 'under100')
+
     }
   }
 
@@ -28,41 +28,45 @@ function Header() {
 
 
   return (
-    <header  className={`${show ? 'davbar':'davbar__blue'}`}>
-      <TitleBox>
-        <h1>Party Toons</h1>
-        <p>Events and Gatherings</p>
-      </TitleBox>
-      <MenuBox>
-        <UnorderedList>
-          <li className='nav-item'>
-            <Customlink to='Welcome' spy={true} smooth={true} offset={-190} duration={500}>Home</Customlink>
-          </li>
-          <li className='nav-item'>
-            <Customlink to='ImageCarausel' spy={true} smooth={true} offset={-60} duration={500}>Samples</Customlink>
-          </li>
-          <li className='nav-item'>
-            <Customlink to='OwnerSection' spy={true} smooth={true} offset={-60} duration={500}>About</Customlink>
-          </li>
-          <li className='nav-item'>
-            <Customlink to='OurRentals' spy={true} smooth={true} offset={-60} duration={500}>Our Rentals</Customlink>
-          </li>
-          <li className='nav-item'>
-            <Customlink to='Workshop' spy={true} smooth={true} offset={-60} duration={500}>Workshop</Customlink>
-          </li>
-          <li className='nav-item'>
-            <Customlink to='Contacts' spy={true} smooth={true} offset={-60} duration={500}>Contacts</Customlink>
-          </li>
-          <MenuIcons>
-            <FacebookIcon style={{ fill: '#424242', cursor: "pointer" }} />
-            <InstagramIcon style={{ fill: '#424242', cursor: "pointer" }} />
-            <ContactPhoneIcon style={{ fill: '#424242', cursor: "pointer" }} />
-          </MenuIcons>
+    <>
+      <div style={{height: 190, width: '100%'}}>
+        <header className={`${show ? 'davbar' : 'davbar__blue'}`}>
+          <TitleBox>
+            <h1>Party Toons</h1>
+            <p>Events and Gatherings</p>
+          </TitleBox>
+          <MenuBox>
+            <UnorderedList>
+              <li className='nav-item'>
+                <Customlink to='Welcome' spy={true} smooth={true} offset={-190} duration={500}>Home</Customlink>
+              </li>
+              <li className='nav-item'>
+                <Customlink to='ImageCarausel' spy={true} smooth={true} offset={-60} duration={500}>Samples</Customlink>
+              </li>
+              <li className='nav-item'>
+                <Customlink to='OwnerSection' spy={true} smooth={true} offset={-60} duration={500}>About</Customlink>
+              </li>
+              <li className='nav-item'>
+                <Customlink to='OurRentals' spy={true} smooth={true} offset={-60} duration={500}>Our Rentals</Customlink>
+              </li>
+              <li className='nav-item'>
+                <Customlink to='Workshop' spy={true} smooth={true} offset={-60} duration={500}>Workshop</Customlink>
+              </li>
+              <li className='nav-item'>
+                <Customlink to='Contacts' spy={true} smooth={true} offset={-60} duration={500}>Contacts</Customlink>
+              </li>
+              <MenuIcons>
+                <FacebookIcon style={{ fill: '#424242', cursor: "pointer" }} />
+                <InstagramIcon style={{ fill: '#424242', cursor: "pointer" }} />
+                <ContactPhoneIcon style={{ fill: '#424242', cursor: "pointer" }} />
+              </MenuIcons>
 
-        </UnorderedList>
+            </UnorderedList>
 
-      </MenuBox>
-    </header>
+          </MenuBox>
+        </header>
+      </div>
+    </>
 
 
   )
