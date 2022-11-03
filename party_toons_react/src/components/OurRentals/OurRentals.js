@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { productImages } from './product-images';
 
 function OurRentals() {
   return (
@@ -8,15 +7,15 @@ function OurRentals() {
       <h2> Our Rentals</h2>
       <CardContainer>
         <RentalCard>
-          <ImageFiller src={require('./images/image1.jpg')} alt='image'/>
+          <ImageFiller src={require('./images/image1.jpg')} alt='image' />
           <h3>Jumpers and bouncy houses</h3>
           <p className='desc'>Look no further for child entertainment with our seasonal variety of bouncy houses.</p>
-          <a href='#'>
+          <a >
             <p>See More</p>
           </a>
         </RentalCard>
         <RentalCard>
-        <ImageFiller src={require('./images/image2.jpg')} alt='image'/>
+          <ImageFiller src={require('./images/image2.jpg')} alt='image' />
           <h3>Snacks</h3>
           <p className='desc'>Choose from our variety of snack machines from slushies to cotton candy, popcorn, and hotdogs.</p>
           <a>
@@ -24,7 +23,7 @@ function OurRentals() {
           </a>
         </RentalCard>
         <RentalCard>
-        <ImageFiller src={require('./images/image3.jpg')} alt='image'/>
+          <ImageFiller src={require('./images/image3.jpg')} alt='image' />
           <h3>Tables, Chairs, and Tents</h3>
           <p className='desc'>We have a seat for everyone invited and platforms for all dishes to be enjoyed. </p>
           <a>
@@ -32,7 +31,7 @@ function OurRentals() {
           </a>
         </RentalCard>
         <RentalCard>
-        <ImageFiller src={require('./images/image4.jpg')} alt='image'/>
+          <ImageFiller src={require('./images/image4.jpg')} alt='image' />
           <h3>Decorations and themes</h3>
           <p className='desc'> Whatever the occasion we have you covered! Our themes selectin should cover most events for most circumstances.</p>
           <a>

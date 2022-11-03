@@ -1,14 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import { Link } from 'react-scroll'
+import './Header.css'
+import { ShowChart } from '@material-ui/icons';
 
 
 function Header() {
+
+  const [show, setShow] = useState(true)
+  const controlNavbar = () => {
+    if (window.scrollY && window.scrollY > 100 ) {
+      setShow(false)
+      console.log('trigered')
+      console.log(window.scrollY)
+    } else {
+      setShow(true)
+      
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar)
+  }, [])
+
+
   return (
-    <Container id='Navbar'>
+    <header  className={`${show ? 'davbar':'davbar__blue'}`}>
       <TitleBox>
         <h1>Party Toons</h1>
         <p>Events and Gatherings</p>
@@ -16,35 +36,35 @@ function Header() {
       <MenuBox>
         <UnorderedList>
           <li className='nav-item'>
-            <Customlink to='Welcome' spy={true} smooth={true} offset={50} duration={500}>Home</Customlink>
+            <Customlink to='Welcome' spy={true} smooth={true} offset={-190} duration={500}>Home</Customlink>
           </li>
           <li className='nav-item'>
-            <Customlink to='ImageCarausel' spy={true} smooth={true} offset={50} duration={500}>Samples</Customlink>
+            <Customlink to='ImageCarausel' spy={true} smooth={true} offset={-60} duration={500}>Samples</Customlink>
           </li>
           <li className='nav-item'>
-            <Customlink to='OwnerSection' spy={true} smooth={true} offset={50} duration={500}>About</Customlink>
+            <Customlink to='OwnerSection' spy={true} smooth={true} offset={-60} duration={500}>About</Customlink>
           </li>
           <li className='nav-item'>
-            <Customlink to='OurRentals' spy={true} smooth={true} offset={50} duration={500}>Our Rentals</Customlink>
+            <Customlink to='OurRentals' spy={true} smooth={true} offset={-60} duration={500}>Our Rentals</Customlink>
           </li>
           <li className='nav-item'>
-            <Customlink to='Workshop' spy={true} smooth={true} offset={50} duration={500}>Workshop</Customlink>
+            <Customlink to='Workshop' spy={true} smooth={true} offset={-60} duration={500}>Workshop</Customlink>
           </li>
           <li className='nav-item'>
-            <Customlink to='Contacts' spy={true} smooth={true} offset={50} duration={500}>Contacts</Customlink>
+            <Customlink to='Contacts' spy={true} smooth={true} offset={-60} duration={500}>Contacts</Customlink>
           </li>
-        <MenuIcons>
-          <FacebookIcon style={{ fill: '#424242', cursor: "pointer" }} />
-          <InstagramIcon style={{ fill: '#424242', cursor: "pointer"}} />
-          <ContactPhoneIcon style={{ fill: '#424242', cursor: "pointer"}} /> 
+          <MenuIcons>
+            <FacebookIcon style={{ fill: '#424242', cursor: "pointer" }} />
+            <InstagramIcon style={{ fill: '#424242', cursor: "pointer" }} />
+            <ContactPhoneIcon style={{ fill: '#424242', cursor: "pointer" }} />
           </MenuIcons>
 
         </UnorderedList>
-          
-      </MenuBox>
-    </Container>
 
-    
+      </MenuBox>
+    </header>
+
+
   )
 }
 
@@ -52,25 +72,12 @@ export default Header;
 
 
 
-const Container = styled.header `
-  display: flex;
-  height: 190px;
-  width: 100vw;
-  background-color: #ffffff91;
-  justify-content: space-between;
-  padding: 0 15.5%;
-  overflow: hidden;
-  position: sticky;
-  top:0;
-  z-index: 100;
-
-`
 
 const Customlink = styled(Link)`
   cursor: pointer;
 `
 
-const TitleBox = styled.div `
+const TitleBox = styled.div`
   line-height: 1.5;
   display: flex;
   flex-direction: column;
@@ -92,13 +99,13 @@ const TitleBox = styled.div `
   }
 `
 
-const MenuBox = styled.div `
+const MenuBox = styled.div`
   display: flex;
   flex-grow: 2;
   justify-content: space-between;
 `
 
-const UnorderedList = styled.ul `
+const UnorderedList = styled.ul`
   display: flex;
   list-style-type: none;
   align-items: center;
@@ -113,7 +120,7 @@ const UnorderedList = styled.ul `
   }
 `
 
-const MenuIcons = styled.div `
+const MenuIcons = styled.div`
   display: flex;
   flex-grow: 3;
   justify-content: space-around;
