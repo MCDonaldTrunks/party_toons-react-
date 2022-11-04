@@ -8,6 +8,7 @@ function OwnerSection() {
         <img
           src="https://www.prhspeakers.com/wp-content/uploads/2013/03/Flynn_Gillian_940_529_72-ppi.jpg"
           alt="photo"
+          style={{borderRadius: '10px'}}
         />
       </OwnerPhotoContainer>
       <OwnerMessage>

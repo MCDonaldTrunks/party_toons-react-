@@ -83,7 +83,7 @@ export default Contacts;
 
 const Container = styled.div`
   display: flex;
-  height: 791px;
+  height: 950px;
   width: 100%;
   background-color: white;
   justify-content: center;
@@ -141,6 +141,7 @@ const RightBackground = styled.div`
   background-clip: content-box;
   justify-content: center;
   align-items: center;
+  height: 85%;
 `
 
 const RightForm = styled.form`

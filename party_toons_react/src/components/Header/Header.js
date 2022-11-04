@@ -5,22 +5,27 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import { Link } from 'react-scroll'
 import './Header.css'
-import { ShowChart } from '@material-ui/icons';
 
 
 function Header() {
 
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(true) 
+  console.log(window.scrollY >=2 ? false : true)
   const controlNavbar = () => {
-    if (window.scrollY && window.scrollY >= 2) {
+    if (window.scrollY >= 2 ) {
       setShow(false)
-      console.log(window.scrollY + 'over100')
-    } else {
+      console.log('activated')
+      
+    } else if(window.scrollY <= 190 ){
+
       setShow(true)
-      console.log(window.scrollY + 'under100')
+      console.log('deactivated')
 
     }
+    console.log(window.scrollY)
   }
+
+  //const initrun= () => {if(window.scrollY >=2 ){setShow(false)}}
 
   useEffect(() => {
     window.addEventListener('scroll', controlNavbar)
@@ -29,8 +34,10 @@ function Header() {
 
   return (
     <>
+      
       <div style={{height: 190, width: '100%'}}>
         <header className={`${show ? 'davbar' : 'davbar__blue'}`}>
+        
           <TitleBox>
             <h1>Party Toons</h1>
             <p>Events and Gatherings</p>
@@ -38,19 +45,19 @@ function Header() {
           <MenuBox>
             <UnorderedList>
               <li className='nav-item'>
-                <Customlink to='Welcome' spy={true} smooth={true} offset={-190} duration={500}>Home</Customlink>
+                <Customlink to='Welcome' spy={true} smooth={true} offset={-200} duration={500}>Home</Customlink>
               </li>
               <li className='nav-item'>
-                <Customlink to='ImageCarausel' spy={true} smooth={true} offset={-60} duration={500}>Samples</Customlink>
+                <Customlink to='ImageCarausel' spy={true} smooth={true} offset={-55} duration={500}>Samples</Customlink>
               </li>
               <li className='nav-item'>
-                <Customlink to='OwnerSection' spy={true} smooth={true} offset={-60} duration={500}>About</Customlink>
+                <Customlink to='OwnerSection' spy={true} smooth={true} offset={-55} duration={500}>About</Customlink>
               </li>
               <li className='nav-item'>
-                <Customlink to='OurRentals' spy={true} smooth={true} offset={-60} duration={500}>Our Rentals</Customlink>
+                <Customlink to='OurRentals' spy={true} smooth={true} offset={-55} duration={500}>Our Rentals</Customlink>
               </li>
               <li className='nav-item'>
-                <Customlink to='Workshop' spy={true} smooth={true} offset={-60} duration={500}>Workshop</Customlink>
+                <Customlink to='Workshop' spy={true} smooth={true} offset={-55} duration={500}>Workshop</Customlink>
               </li>
               <li className='nav-item'>
                 <Customlink to='Contacts' spy={true} smooth={true} offset={-60} duration={500}>Contacts</Customlink>

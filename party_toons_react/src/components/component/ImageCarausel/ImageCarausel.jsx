@@ -66,6 +66,7 @@ const Wrapper = styled.div`
     height: 70%;
     background-color: #918d8d;
     padding: 15px 15px;
+    border-radius: 10px;
 `
 
 const Container = styled.div`
