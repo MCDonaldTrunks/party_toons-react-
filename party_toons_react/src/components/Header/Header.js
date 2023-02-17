@@ -35,8 +35,8 @@ function Header() {
   return (
     <>
       
-      <div style={{height: 190, width: '100%'}}>
-        <header className={`${show ? 'davbar' : 'davbar__blue'}`}>
+      <Container>
+        <HeaderContainer className={`${show ? 'davbar' : 'davbar__blue'}`}>
         
           <TitleBox>
             <h1>Party Toons</h1>
@@ -71,8 +71,8 @@ function Header() {
             </UnorderedList>
 
           </MenuBox>
-        </header>
-      </div>
+        </HeaderContainer>
+      </Container>
     </>
 
 
@@ -82,6 +82,24 @@ function Header() {
 export default Header;
 
 
+
+const Container = styled.div`
+  height: 190px;
+  width: 100%;
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi){
+
+    height: 120px;
+  }
+  
+  
+
+
+`
 
 
 const Customlink = styled(Link)`
@@ -108,6 +126,37 @@ const TitleBox = styled.div`
   p {
     font-weight: 300;
   }
+
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0 4em 0 1em;
+    h1 {
+      font-weight: 325;
+      color: green;
+    }
+
+    h1, p {
+      display:flex;
+      width: 110px;
+    }
+
+    p {
+      font-weight: 300;
+    }
+
+  }
+
+
 `
 
 const MenuBox = styled.div`
@@ -137,3 +186,19 @@ const MenuIcons = styled.div`
   justify-content: space-around;
   max-width: 150px;
 `
+
+const HeaderContainer = styled.header`
+  @media screen 
+      and (min-device-width: 1200px) 
+      and (max-device-width: 1600px) 
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (min-resolution: 192dpi) { 
+        heights
+      
+  }
+
+`
+
+
+//x 1368 y 793 
+
