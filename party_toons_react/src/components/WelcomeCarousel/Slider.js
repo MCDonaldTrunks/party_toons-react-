@@ -74,6 +74,7 @@ const WelcomeCard1 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
 
   h4 {
     font-weight: 300;

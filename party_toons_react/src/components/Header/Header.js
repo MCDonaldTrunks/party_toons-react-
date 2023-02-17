@@ -36,7 +36,7 @@ function Header() {
     <>
       
       <Container>
-        <HeaderContainer className={`${show ? 'davbar' : 'davbar__blue'}`}>
+        <header className={`${show ? 'davbar' : 'davbar__blue'}`}>
         
           <TitleBox>
             <h1>Party Toons</h1>
@@ -48,10 +48,10 @@ function Header() {
                 <Customlink to='Welcome' spy={true} smooth={true} offset={-200} duration={500}>Home</Customlink>
               </li>
               <li className='nav-item'>
-                <Customlink to='ImageCarausel' spy={true} smooth={true} offset={-55} duration={500}>Samples</Customlink>
+                <Customlink to='ImageCarausel' spy={true} smooth={true} offset={-15} duration={500}>Samples</Customlink>
               </li>
               <li className='nav-item'>
-                <Customlink to='OwnerSection' spy={true} smooth={true} offset={-55} duration={500}>About</Customlink>
+                <Customlink to='OwnerSection' spy={true} smooth={true} offset={0} duration={500}>About</Customlink>
               </li>
               <li className='nav-item'>
                 <Customlink to='OurRentals' spy={true} smooth={true} offset={-55} duration={500}>Our Rentals</Customlink>
@@ -60,18 +60,21 @@ function Header() {
                 <Customlink to='Workshop' spy={true} smooth={true} offset={-55} duration={500}>Workshop</Customlink>
               </li>
               <li className='nav-item'>
-                <Customlink to='Contacts' spy={true} smooth={true} offset={-60} duration={500}>Contacts</Customlink>
+                <Customlink to='Contacts' spy={true} smooth={true} offset={0} duration={500}>Contacts</Customlink>
               </li>
               <MenuIcons>
                 <FacebookIcon style={{ fill: '#424242', cursor: "pointer" }} />
-                <InstagramIcon style={{ fill: '#424242', cursor: "pointer" }} />
+                <a target="_blank" href='https://www.instagram.com/party_toons/'>
+                  <InstagramIcon style={{ fill: '#424242', cursor: "pointer" }} />
+                </a>
+                
                 <ContactPhoneIcon style={{ fill: '#424242', cursor: "pointer" }} />
               </MenuIcons>
 
             </UnorderedList>
 
           </MenuBox>
-        </HeaderContainer>
+        </header>
       </Container>
     </>
 
@@ -176,7 +179,7 @@ const UnorderedList = styled.ul`
   }
 
   li {
-      font-weight: 300;
+    font-weight: 300;
   }
 `
 
@@ -187,18 +190,7 @@ const MenuIcons = styled.div`
   max-width: 150px;
 `
 
-const HeaderContainer = styled.header`
-  @media screen 
-      and (min-device-width: 1200px) 
-      and (max-device-width: 1600px) 
-      and (-webkit-min-device-pixel-ratio: 2)
-      and (min-resolution: 192dpi) { 
-        heights
-      
-  }
-
-`
 
 
-//x 1368 y 793 
+
 

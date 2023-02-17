@@ -37,13 +37,22 @@ const Container = styled.div`
   height: 838px;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    height: 100vh;
+    justify-content: space-around;
+  }
+
   h2 {
-    font-size: 32px;
+    font-size: 27px;
     font-weight: 400;
-    padding-bottom: 2em;
+    margin-top: 30px;
   }
 `;
 const SubContainer = styled.div`
@@ -54,6 +63,20 @@ const SubContainer = styled.div`
   padding: 4em 5em;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    width: 1050px;
+    height: 490px;
+    margin-bottom: 70px;
+
+  }
+
+
 `;
 
 const LeftSide = styled.div`
@@ -76,6 +99,27 @@ const LeftSide = styled.div`
     line-height: 1.4;
   }
 
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    p {
+    line-height: 1.2;
+    }
+  
+
+  
+    h3 {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+    
+  }
+  
+
   
 `;
 
@@ -84,10 +128,20 @@ const RightSide = styled.div`
   width: 505px;
   height: 428px;
 
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    width: 480px;
+    height: 380px;
+  }
+
   img {
     width: 100%;
     height: 100%;
     object-fit: fill;
+    border-radius: 15px;
   }
 `;
 

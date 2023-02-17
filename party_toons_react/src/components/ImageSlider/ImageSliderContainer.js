@@ -26,9 +26,9 @@ const SubHeader = styled.span`
 `;
 
 const Container = styled.div`
-  background-color: white;
+  background-color: red;
   width: 100%;
-  height: 1208px;
+  height: 500px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -37,6 +37,16 @@ const Container = styled.div`
   h2 {
     margin-top: 50px;
   }
+
+
+  @media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi){
+      height: 500px;
+
+    }
 `;
 
 

@@ -11,7 +11,7 @@ const ImageCarausel = props => {
         <Container id="ImageCarausel">
             <h2>Low price rentals, Call us now!</h2>
             <SubHeader>
-                We are interested in individualities and the possibility of creating
+                We are interested in individualities<br></br> and the possibility of creating
                 unforgettable moments — that’s what makes our work so exciting
             </SubHeader>
             <Wrapper>
@@ -77,13 +77,36 @@ const Container = styled.div`
     justify-content: center;
     background-color: #ffffff;
     flex-direction: column ;
+
+    @media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi){
+      height: 800px;
+
+      h2 {
+        font-size: 24px;
+      }
+    }
 `
 const SubHeader = styled.span`
-  font-size: 18px;
+  font-size: 13px;
   text-align: center;
   width: 40%;
   line-height: 1.8;
   padding: 50px 0;
+
+  @media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi){
+      padding: 20px 0;
+      font-size: 18px;
+      line-height: 1.4;
+      width: 50%;
+    }
 `;
 
 

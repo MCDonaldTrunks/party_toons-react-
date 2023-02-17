@@ -19,7 +19,7 @@ function Contacts() {
     <Container id="Contacts">
       <SubContainer>
         <LeftInfo>
-          <h2>Contacts</h2>
+          <h2>Contact Us!</h2>
           <p>
             We welcome every new friend. Together we will bring some magic into
             this world.
@@ -62,7 +62,7 @@ function Contacts() {
               onChange={(e) => setEmail(e.target.value)}
             ></input>
             <textarea
-              placeholder="Type your message*"
+              placeholder="Enter your details*"
               value={message}
               name = 'message'
               onChange={(e) => setMessage(e.target.value)}
@@ -142,6 +142,14 @@ const RightBackground = styled.div`
   justify-content: center;
   align-items: center;
   height: 85%;
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    height: 70%;
+  }
 `
 
 const RightForm = styled.form`
@@ -159,7 +167,13 @@ const RightForm = styled.form`
     border-color: #d9d9d9;
     border: none;
     margin-top: 24px;
+
+    :focus{
+      outline-color: green;
+    }
   }
+
+  
 
   textarea {
     border-color: #d9d9d9;
@@ -170,6 +184,10 @@ const RightForm = styled.form`
     margin-top: 24px;
     resize: none;
     border: none;
+
+    :focus{
+      outline-color: green;
+    }
   }
 
   button:hover, button:focus {
